@@ -2,20 +2,18 @@
 class Sysl < Formula
   desc "Sysl generates code and documentation from system specifications"
   homepage "https://sysl.io/"
-  version "0.146.0"
+  version "0.147.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/anz-bank/sysl/releases/download/v0.146.0/sysl_0.146.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "3e7f14728616cc5ef17feaa914569c9eed12d0d6b2f46bf1d67618ed34413fd1"
+    url "https://github.com/anz-bank/sysl/releases/download/v0.147.0/sysl_0.147.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "59d5a511bf1e6b7aa09cef7e68b723c526af32e971f054d11fcbf60d8b493a01"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.146.0/sysl_0.146.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "0ceeb375f317032af5693e50c7998bf20064e3b6b77184dbcfe6ef576aa86b86"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.147.0/sysl_0.147.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "31457fc811a80777900cb399769c083cac600d9020110f56a635d7110b21f802"
     end
   end
-  
-  depends_on "go"
 
   def install
     bin.install "sysl"
