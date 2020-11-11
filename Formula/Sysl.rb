@@ -2,16 +2,16 @@
 class Sysl < Formula
   desc "Sysl generates code and documentation from system specifications"
   homepage "https://sysl.io/"
-  version "0.260.0"
+  version "0.264.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/anz-bank/sysl/releases/download/v0.260.0/sysl_0.260.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
-    sha256 "839396f63170a664385b8f04b0bc66e26ea2f7a9562bf3351cdf470dfcdde0a7"
+    url "https://github.com/anz-bank/sysl/releases/download/v0.264.0/sysl_0.264.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
+    sha256 "6d602fb9577208420a500726b2c38bbeea278462b5440ee78fc0e9c207eee79d"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.260.0/sysl_0.260.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "98a312278235c25ab45220739af6db0281bce2cc1d9c2ae1ce0c52d5a21776dc"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.264.0/sysl_0.264.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "55246e3f8318c7ca6c864d1a0cb69053477e5191e22f13c5bdb01f56eb01f28a"
     end
   end
 
