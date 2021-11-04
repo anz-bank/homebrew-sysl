@@ -5,12 +5,12 @@
 class Sysl < Formula
   desc "Sysl generates code and documentation from system specifications"
   homepage "https://sysl.io/"
-  version "0.466.0"
+  version "0.467.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.466.0/sysl_0.466.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "88d4b9cb03995bce79e575bab9e6265bec86b8df2cd3949c4a6d6921535951d8"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.467.0/sysl_0.467.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "4ffc98ca11e32585078c0234a62bac2290d06c6446a4c509be6ce168a64e199b"
 
       def install
         bin.install "sysl"
@@ -20,8 +20,8 @@ class Sysl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.466.0/sysl_0.466.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "bb3c9da81cf23eaf4f89e1c4abcfe7b323d987d9de382bcd0bcbfd88f195720e"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.467.0/sysl_0.467.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "d914f28e0264d0939606e5f02afafa6446c50b8ad2efa0f6fd09f1a06c09b275"
 
       def install
         bin.install "sysl"
