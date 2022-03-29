@@ -5,20 +5,20 @@
 class Sysl < Formula
   desc "Sysl generates code and documentation from system specifications"
   homepage "https://sysl.io/"
-  version "0.533.0"
+  version "0.534.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.533.0/sysl_0.533.0_darwin-arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "e46c9eefe2629e18065dd26d6f5d54c1d4cd2b7680115b971c2fd726f26f8ec5"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.534.0/sysl_0.534.0_darwin-arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "e0e78a82da282611daa0faed71a48a37d927008c283eda06ed4925468f220377"
 
       def install
         bin.install "sysl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.533.0/sysl_0.533.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "bf3d21268bb6fe01cefc7042fd0691477a03eabf2da1b5c3d7bb65a85cc4572b"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.534.0/sysl_0.534.0_darwin-amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "9b869e6492d6a1adfdc7dddcd5bf09d281513927e2d3510f8383a2fa9ebebd6a"
 
       def install
         bin.install "sysl"
@@ -27,17 +27,17 @@ class Sysl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.533.0/sysl_0.533.0_linux-arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c8459e5dd76cd7fdd76de5b28d83386f1eba4f7d6f593572e13d2d1d198f30b7"
+    if Hardware::CPU.intel?
+      url "https://github.com/anz-bank/sysl/releases/download/v0.534.0/sysl_0.534.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "6a9aab7a2731f032bb47120005e8764d975d1ca618cf8ecc317aea72114b61ef"
 
       def install
         bin.install "sysl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.533.0/sysl_0.533.0_linux-amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "f27e3a92c4b983b7692180346cf9c6c77eb7fa652b20b1eb24983356fcc90131"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/anz-bank/sysl/releases/download/v0.534.0/sysl_0.534.0_linux-arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "acd192ac73309f59edf7891089ef164773c6755ffea130e9cc791c669736b171"
 
       def install
         bin.install "sysl"
