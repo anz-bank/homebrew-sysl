@@ -5,20 +5,20 @@
 class Sysl < Formula
   desc "Sysl generates code and documentation from system specifications"
   homepage "https://sysl.io/"
-  version "0.640.0"
+  version "0.642.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.640.0/sysl_0.640.0_darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "800a9b0e7968a7173dbdf7f63ef06247ad4886a25f84d7137393b417f49ca894"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.642.0/sysl_0.642.0_darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "def8965485e1f4ce11870548e324f83a9c53d2f56c800334f3c71307cdb640a5"
 
       def install
         bin.install "sysl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.640.0/sysl_0.640.0_darwin-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "e37611e8a5cdfc38828256ad0c3199420d75f77838f5562e7b625190ab01d2d9"
+      url "https://github.com/anz-bank/sysl/releases/download/v0.642.0/sysl_0.642.0_darwin-amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "33b6ec9430ca6113be0b3b221a337f9f3490bf81285ca322d41a187c8736f61b"
 
       def install
         bin.install "sysl"
@@ -27,17 +27,17 @@ class Sysl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.640.0/sysl_0.640.0_linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ddd5480930ad67b37d3020223f67d3313f3fdb0505af7d73d3783b28f5c7100f"
+    if Hardware::CPU.intel?
+      url "https://github.com/anz-bank/sysl/releases/download/v0.642.0/sysl_0.642.0_linux-amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "fd8b795d78134637cfc7f4a00baa1e106e4d7e40443dd748cd35c77c324545d6"
 
       def install
         bin.install "sysl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/anz-bank/sysl/releases/download/v0.640.0/sysl_0.640.0_linux-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a159623ddfad87e1ca0abf3b7082364c6cb5a57843e5a44311d91d46eba62f50"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/anz-bank/sysl/releases/download/v0.642.0/sysl_0.642.0_linux-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ca5a880d5e30da30fb1f21ddd52d0ff07bab143f32179f317724bfb170f3f0ba"
 
       def install
         bin.install "sysl"
